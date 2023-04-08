@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: #4CAF50;
+    }
+    /* Green */
+    .button2 {
+        background-color: #008CBA;
+    }
+    /* Blue */
+    .button3 {
+        background-color: #FF6666;
+    }
+    /* Red */
+    body {
+        background-color: wheat;
+    }
+</style>
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Weather Forecast</h1>
+    <p>Choose a city</p>
+
+    <button id="myButton1" class="button button1">Reno</button>
+
+    <script type="text/javascript">document.getElementById("myButton1").onclick = function () {
+            document.location = 'WeatherFetch?q=Reno';
+        };</script>
+    <button id="myButton2" class="button button3">Austin</button>
+
+    <script type="text/javascript">document.getElementById("myButton2").onclick = function () {
+            document.location = 'WeatherFetch?q=Austin';
+        };</script>
+    <button id="myButton3" class="button button2">Tampa</button>
+
+    <script type="text/javascript">document.getElementById("myButton3").onclick = function () {
+            document.location = 'WeatherFetch?q=Tampa';
+        };</script>
+</div>
+
+<style>
+    * {
+        box-sizing: border-box;
+        color: black;
+    }
+
+    .img-container {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        overflow: hidden;
+        height: 198px
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .image-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    .image-wrapper .img-container {
+        float: none;
+        margin: 0 auto;
+        align-items: center; /* Menambahkan properti align-items untuk memposisikan gambar ke tengah */
+        flex-direction: column;
+    }
+    .img-container img {
+        border: 3px solid black;
+    }
+</style>
+<body>
+
+    <div class="clearfix">
+        <div class="img-container">
+            <img src="https://previews.123rf.com/images/paulrommer/paulrommer1405/paulrommer140500098/28918598-reno-skyline-in-watercolor-background.jpg" alt="Reno" style="width:350px">
+        </div>
+        <div class="img-container">
+            <img src="https://www.pixelstalk.net/wp-content/uploads/2016/10/Austin-Wallpapers-HD-Free-Download.jpg" alt="Austin" style="width:350px">
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1583801891351-8deae152ab6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Tampa" style="width:350px">
+        </div>
+    </div>
+
+</body>
+
